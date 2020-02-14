@@ -58,8 +58,4 @@ Notes: Pastika python sudah terinstall. Jika belum, silakan ikuti [Python Instal
 
 ___________________________________________________________
 
-## Working with Python Script
 
-### Select Interpreter
-### Open file/folder
-### Runing file on terminal
