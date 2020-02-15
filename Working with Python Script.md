@@ -2,8 +2,6 @@ Working with python script
 >**Important Notes**: 
 >Please note that this guide assume you to already installed python environment. If you haven't installed it yet, please follow [this_guide](google.com)
 
-
-# finder + terminal
 We will try to use our terminal (or in Windows, make sure to use `command prompt`)
 
 ### 1. Make new directory
@@ -69,7 +67,7 @@ Copy-paste code above into your `example.py`, and hit `save`. Now your python sc
 
 
 ### 3. Run python file
-1. Open your terminal, change directory to where your `example.py` file located. If your path is too long to type, you can copy-paste it to your terminal.
+Open your terminal, change directory to where your `example.py` file located. If your path is too long to type, you can copy-paste it to your terminal. Here's a quick view of how you can do it 
 
 <details><summary>windows</summary>
 </details>
@@ -77,28 +75,15 @@ Copy-paste code above into your `example.py`, and hit `save`. Now your python sc
 <details><summary>mac</summary>
 
 - On your `Finder`, right click on your `python_exercise` folder
-- hold `option` button to see the `
+- Hover onto `Copy "python_exercise"` (Don't click)
+- hold `option` button to see the `Copy "python_exercise" as pathname`, and click it. You will now have the pathname ino your clipboard. 
+- Open your terminal, write `cd <command + v>`. You should now moved into designated directory.
+- type`python example.py`and hit enter.
 </details>
 
 <details><summary>windows</summary>
 </details>
-
-select python environment 
-
-run .py file 
-
-# vscode 
-open directory 
-create .py file 
-open terminal
-
-
-
-### Select Interpreter
-### Open file/folder
-### Runing file on terminal
-
-
+ 
 
 ___
 # Advanced Python Script
@@ -156,7 +141,7 @@ def bagi(a,b):
     return (a/b)
 ```
 
-after that, create new `.py` file or `.ipynb` file and if you write this correctly, the return should be `3`. 
+after that, create new `main.py` or `main.ipynb` (depends what you like) and if you write this correctly, the return should be `3`. 
 
 ```python
 >>> import OperasiDasar as od
@@ -183,5 +168,40 @@ def jumlah(a):
         for i in range (1,a+1):
             res += i 
     return res 
-
 ```
+
+Now, on your previous `main.py` or `main.ipynb` file, import the modules. Please note that we are importing a module, so type it correctly what module you wanted to import inside a specific package. These are several way you can import them.
+```python 
+import kalkulus.OperasiDasar as klod 
+import kalkulus.OperasiLanjut as klol
+```
+or 
+```python 
+from kalkulus import OperasiDasar as klod
+from kalkulus import OperasiLanjut as klol
+```
+or 
+```python 
+from kalkulus import OperasiDasar as klod, OperasiLanjut as klol
+```
+
+I prefer the last one. 
+
+Now let's wrap it up. Copy these code into your `main.py` file or `main.ipynb` file and see the results
+```python
+from kalkulus import OperasiDasar as klod, OperasiLanjut as klol
+
+faktor1 = 13
+faktor2 = 37
+
+nilai1 = klod.kali(faktor1, faktor2)
+nilai2 = klol.faktorial(nilai1)
+
+print(f"Hasil kali: {nilai1}")
+print(f"Haisl faktorial kali: {nilai2}")
+```
+Basically it will print the result of `481!` wich resulting in a value **over 1000** digit. How would you do that in different programming language? 
+
+__
+*Love, Python*
+
